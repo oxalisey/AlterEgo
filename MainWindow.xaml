@@ -1,0 +1,179 @@
+<Window x:Class="AlterEgo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlterEgo"
+        mc:Ignorable="d"
+        Title="Alter Ego"
+        Height="700"
+        Width="1000"
+        MinHeight="450"
+        MinWidth="600"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+
+    <Grid Background="#220101">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0"
+                   Text="Добро пожаловать в Alter Ego!"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Foreground="#D2D2D2"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   Margin="15,25,15,10"/>
+
+        <!-- Подзаголовок -->
+        <TextBlock Grid.Row="1"
+                   Text="Выберите персонажа:"
+                   FontSize="15"
+                   Foreground="#D2D2D2"
+                   HorizontalAlignment="Center"
+                   Margin="10,5,10,15"/>
+
+        <!-- Карточки персонажей -->
+        <Grid Grid.Row="2"
+              Margin="15,0,15,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Женский персонаж -->
+            <Border Grid.Column="0"
+                    BorderBrush="#70252D"
+                    BorderThickness="1"
+                    Background="#350707"
+                    CornerRadius="12"
+                    Margin="5">
+
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0"
+                           Source="Images/woman_change.jpg"
+                           Stretch="Uniform"
+                           Margin="5"
+                           HorizontalAlignment="Stretch"
+                           VerticalAlignment="Stretch"/>
+
+                    <RadioButton x:Name="WomanRadio"
+                                 Grid.Row="1"
+                                 Content="Жен"
+                                 GroupName="CharacterGender"
+                                 FontSize="15"
+                                 Foreground="White"
+                                 HorizontalAlignment="Center"
+                                 Margin="5,8,5,10"/>
+                </Grid>
+            </Border>
+
+            <!-- Мужской персонаж -->
+            <Border Grid.Column="1"
+                    BorderBrush="#70252D"
+                    BorderThickness="1"
+                    Background="#350707"
+                    CornerRadius="12"
+                    Margin="5">
+
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0"
+                           Source="Images/man_change.jpg"
+                           Stretch="Uniform"
+                           Margin="5"
+                           HorizontalAlignment="Stretch"
+                           VerticalAlignment="Stretch"/>
+
+                    <RadioButton x:Name="ManRadio"
+                                 Grid.Row="1"
+                                 Content="Муж"
+                                 GroupName="CharacterGender"
+                                 FontSize="15"
+                                 Foreground="White"
+                                 HorizontalAlignment="Center"
+                                 Margin="5,8,5,10"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Нижняя панель кнопок -->
+        <!-- Нижняя панель кнопок -->
+        <Grid Grid.Row="3"
+                Margin="15,0,15,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Content="О проекте"
+                    Click="About_Click"
+                    Width="120"
+                    Height="32"
+                    FontSize="12"
+                    Background="#350707"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    HorizontalAlignment="Left"/>
+
+            <Button Grid.Column="1"
+                    Content="Далее"
+                    Click="Next_Click"
+                    Width="150"
+                    Height="35"
+                    FontSize="14"
+                    Background="#8A1111"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    HorizontalAlignment="Center"/>
+
+            <Button Grid.Column="2"
+                    Content="Мои персонажи"
+                    Click="Characters_Click"
+                    Width="140"
+                    Height="32"
+                    FontSize="12"
+                    Background="#8A1111"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    HorizontalAlignment="Center"/>
+
+            <Button Grid.Column="3"
+                    Content="Выйти"
+                    Click="Exit_Click"
+                    Width="100"
+                    Height="32"
+                    FontSize="12"
+                    Background="#350707"
+                    Foreground="White"
+                    BorderBrush="#70252D"
+                    BorderThickness="1"
+                    Cursor="Hand"
+                    HorizontalAlignment="Right"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+
+# Сборка .NET
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# Временные файлы
+*.user
+*.suo
+*.tmp
+
+# Файлы операционной системы
+Thumbs.db
+.DS_Store

@@ -1,0 +1,26 @@
+
+<Window x:Class="AlterEgo.CharactersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Мои персонажи"
+        Height="500"
+        Width="700"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid Background="#220101">
+        <StackPanel Margin="25">
+            <TextBlock Text="Мои персонажи ♡"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="#D2D2D2"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+            <TextBlock Text="Здесь будут отображаться все созданные персонажи."
+                       FontSize="15"
+                       Foreground="#D2D2D2"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
