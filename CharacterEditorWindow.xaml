@@ -11,15 +11,23 @@
         WindowStyle="None"
         ResizeMode="NoResize">
 
-        <Window.Resources>
-        <Style x:Key="WardrobeButton" TargetType="Button">
-            <Setter Property="Height" Value="42"/>
-            <Setter Property="Margin" Value="0,0,0,10"/>
-            <Setter Property="Background" Value="#641018"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Cursor" Value="Hand"/>
+    <Window.Resources>
+        <Style x:Key="WardrobeButton"
+               TargetType="Button">
+            <Setter Property="Height"
+                    Value="42"/>
+            <Setter Property="Margin"
+                    Value="0,0,0,10"/>
+            <Setter Property="Background"
+                    Value="#641018"/>
+            <Setter Property="Foreground"
+                    Value="White"/>
+            <Setter Property="BorderThickness"
+                    Value="0"/>
+            <Setter Property="FontSize"
+                    Value="14"/>
+            <Setter Property="Cursor"
+                    Value="Hand"/>
         </Style>
     </Window.Resources>
 
@@ -32,7 +40,8 @@
         </Grid.RowDefinitions>
 
         <!-- Заголовок -->
-        <StackPanel Grid.Row="0" Margin="25,20,25,10">
+        <StackPanel Grid.Row="0"
+                    Margin="25,20,25,10">
             <TextBlock Text="ALTER EGO"
                        FontSize="30"
                        FontWeight="Bold"
@@ -47,7 +56,8 @@
         </StackPanel>
 
         <!-- Основная часть -->
-        <Grid Grid.Row="1" Margin="25,10,25,15">
+        <Grid Grid.Row="1"
+              Margin="25,10,25,15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
@@ -132,17 +142,62 @@
             </Border>
         </Grid>
 
-        <!-- Нижняя кнопка -->
-        <Button Grid.Row="2"
-                Content="Назад"
-                Click="Back_Click"
-                Width="130"
-                Height="35"
-                HorizontalAlignment="Left"
-                Margin="25,0,0,18"
-                Background="#8A1111"
-                Foreground="White"
-                BorderThickness="0"
-                Cursor="Hand"/>
+        <!-- Нижние кнопки -->
+        <Grid Grid.Row="2"
+              Margin="25,0,25,18">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Выход -->
+            <Button Content="Выйти"
+                    Click="Exit_Click"
+                    Width="110"
+                    Height="38"
+                    HorizontalAlignment="Left"
+                    Background="#8A1111"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"/>
+
+            <!-- Назад -->
+            <Button Grid.Column="1"
+                    Content="Назад"
+                    Click="Back_Click"
+                    Width="110"
+                    Height="38"
+                    Margin="0,0,10,0"
+                    Background="#8A1111"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"/>
+
+            <!-- Далее -->
+            <Button Grid.Column="2"
+                    Content="Далее"
+                    Click="Next_Click"
+                    Width="110"
+                    Height="38"
+                    Margin="0,0,10,0"
+                    Background="#641018"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"/>
+
+            <!-- Сохранить -->
+            <Button Grid.Column="3"
+                    Content="Сохранить данные"
+                    Click="Save_Click"
+                    Width="170"
+                    Height="38"
+                    Background="#641018"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"/>
+        </Grid>
     </Grid>
 </Window>

@@ -52,5 +52,37 @@ namespace AlterEgo
         {
             Close();
         }
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            CharacterDetailsWindow detailsWindow =
+                new CharacterDetailsWindow();
+
+            detailsWindow.Owner = this;
+
+            detailsWindow.ShowDialog();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(
+                "Ты действительно хочешь выйти из приложения?",
+                "Alter Ego",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(
+                "Внешность персонажа сохранена!",
+                "Alter Ego",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
     }
 }
